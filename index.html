@@ -45,7 +45,7 @@
     display: flex; flex-direction: column;
     justify-content: center; align-items: center;
     text-align: center; padding: 5rem 1.5rem 4rem;
-    position: relative;
+    position: relative; gap: 0;
     background:
       radial-gradient(ellipse at 65% 35%, rgba(109,213,250,0.09) 0%, transparent 55%),
       radial-gradient(ellipse at 25% 75%, rgba(240,184,64,0.1) 0%, transparent 50%);
@@ -96,18 +96,21 @@
   }
 
   .hero-meta {
-    display: flex; gap: 2rem; flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem 2rem;
+    justify-items: center;
     animation: fadeUp 0.8s 0.45s ease both;
     position: relative; z-index: 1;
+    width: 100%; max-width: 500px;
   }
   .meta-item { text-align: center; min-width: 100px; }
   .meta-label { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
   .meta-value { font-size: 0.9rem; color: var(--text); margin-top: 0.3rem; }
 
   .scroll-hint {
-    position: absolute; bottom: 2rem; left: 50%;
-    transform: translateX(-50%); color: var(--muted);
+    position: relative; margin-top: 2.5rem;
+    color: var(--muted);
     font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
     display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
     animation: fadeUp 0.8s 0.6s ease both;
@@ -313,31 +316,18 @@
   }
 
   @media (max-width: 480px) {
-    .hero { padding: 4.5rem 1rem 3rem; min-height: auto; padding-bottom: 4rem; }
+    .hero { padding: 4rem 1.2rem 3rem; min-height: 100vh; }
     .hero-badge { font-size: 0.6rem; letter-spacing: 0.12em; padding: 0.35rem 0.9rem; }
     .hero h1 { font-size: clamp(1.7rem, 8vw, 2.5rem); }
-    .hero-meta { gap: 1rem; }
-    .meta-item { min-width: 80px; }
+    .hero-meta { gap: 1rem 1.5rem; max-width: 320px; grid-template-columns: 1fr 1fr; }
     .meta-label { font-size: 0.58rem; }
     .meta-value { font-size: 0.78rem; }
     .tab-btn { font-size: 0.62rem; padding: 0.9rem 0.9rem; letter-spacing: 0.06em; }
     .section { padding: 2.5rem 1rem; }
     .section-header { padding-left: 1rem; }
     .section-title { font-size: clamp(1.4rem, 6vw, 2rem); }
-    .project-desc {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--accent);
-    border-radius: 6px;
-    padding: 1.5rem 2rem;
-    margin-bottom: 2rem;
-  }
-  .project-desc p { color: #ccc9c0; font-size: 0.97rem; line-height: 1.8; }
-  .project-desc strong { color: var(--accent); font-weight: 600; }
-
-  .stats-strip { grid-template-columns: 1fr; gap: 1px; }
-    .stat-cell { padding: 1rem; }
-    .stat-num { font-size: 1.6rem; }
+    .project-desc { padding: 1rem 1.2rem; }
+    .project-desc p { font-size: 0.88rem; }
     .card { padding: 1rem 1.1rem; }
     .card h3 { font-size: 1.05rem; }
     .card p { font-size: 0.88rem; }
