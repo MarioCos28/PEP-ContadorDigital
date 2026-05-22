@@ -178,6 +178,17 @@
   .card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 0.8rem; color: var(--accent2); }
   .card p { color: #ccc9c0; font-size: 0.95rem; }
 
+  .project-desc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+  }
+  .project-desc p { color: #ccc9c0; font-size: 0.97rem; line-height: 1.8; }
+  .project-desc strong { color: var(--accent); font-weight: 600; }
+
   .stats-strip {
     display: grid; grid-template-columns: repeat(3, 1fr);
     gap: 1px; background: var(--border);
@@ -282,7 +293,18 @@
     .hero { padding: 5rem 1.2rem 3rem; }
     .hero-meta { gap: 1.2rem; }
     .meta-value { font-size: 0.82rem; }
-    .stats-strip { grid-template-columns: repeat(3,1fr); }
+    .project-desc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+  }
+  .project-desc p { color: #ccc9c0; font-size: 0.97rem; line-height: 1.8; }
+  .project-desc strong { color: var(--accent); font-weight: 600; }
+
+  .stats-strip { grid-template-columns: repeat(3,1fr); }
     .stat-num { font-size: 1.5rem; }
     .materials-grid { grid-template-columns: 1fr 1fr; }
     .gallery { grid-template-columns: repeat(3, 1fr); }
@@ -302,7 +324,18 @@
     .section { padding: 2.5rem 1rem; }
     .section-header { padding-left: 1rem; }
     .section-title { font-size: clamp(1.4rem, 6vw, 2rem); }
-    .stats-strip { grid-template-columns: 1fr; gap: 1px; }
+    .project-desc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+  }
+  .project-desc p { color: #ccc9c0; font-size: 0.97rem; line-height: 1.8; }
+  .project-desc strong { color: var(--accent); font-weight: 600; }
+
+  .stats-strip { grid-template-columns: 1fr; gap: 1px; }
     .stat-cell { padding: 1rem; }
     .stat-num { font-size: 1.6rem; }
     .card { padding: 1rem 1.1rem; }
@@ -375,10 +408,8 @@
     <div class="section-eyebrow">Sección 01</div>
     <h2 class="section-title">Introducción</h2>
   </div>
-  <div class="stats-strip">
-    <div class="stat-cell"><div class="stat-num">8</div><div class="stat-lbl">Componentes</div></div>
-    <div class="stat-cell"><div class="stat-num">21</div><div class="stat-lbl">LEDs verdes</div></div>
-    <div class="stat-cell"><div class="stat-num">0–9</div><div class="stat-lbl">Conteo digital</div></div>
+  <div class="project-desc">
+    <p>Este proyecto consiste en la construcción de un <strong>contador digital ascendente del 0 al 9</strong> utilizando componentes electrónicos analógicos. El sistema emplea el temporizador <strong>NE555</strong> en modo astable para generar pulsos de reloj, y el integrado <strong>CD4026</strong> para realizar el conteo y controlar visualmente un conjunto de diodos LED verdes, sustituyendo el display de 7 segmentos tradicional por una solución práctica y educativa montada sobre protoboard.</p>
   </div>
   <div class="card">
     <p>La finalidad de este proyecto es fomentar el aprendizaje práctico en el área de la electrónica analógica aplicada, utilizando el control de diodos LED y diversos materiales electrónicos. A través de la construcción de este prototipo se busca fortalecer las competencias en el diseño y manejo de circuitos, la correcta conexión de componentes electrónicos y el uso de herramientas de simulación, promoviendo así una comprensión más sólida de los principios de la electrónica analógica y digital básica.</p>
